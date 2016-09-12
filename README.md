@@ -1,12 +1,7 @@
-# Arrange_FeatureClasses
-Python 2.7.3 script to rearrange fields in a File Geodatabase
-
-Field Organizer V. 0.2 (Last update: Sep. 7, 2016)
+Field Organizer V. 0.3 (Last update: Sep. 12, 2016)
 
 Author: J. Davidson
-Purpose: This Python script is used to change the order of fields in an Esri ArcGIS Desktop 10.x feature class. Currently, because I made this in a couple of hours while at work, the program only supports feature classes. However, it would be easy to alter to make it support tables as well. Also, the program saves the output as a different file to ensure original data is not damaged, but, this also could be changed to suit needs.
-In a nutshell, the program outputs a CSV file with all of the fields in the feature class, you can then reorganize the fields and rearrange them to suit your needs in the CSV. Once they have been reorganized, you can finish the program and a new feature class template will be created with the new field order. You can optionally append the data from the old FC to the new FC, just type 'Y' when prompted.
-This program does not yet have error checking.
+Purpose: Reorganize fields in a feature class.
 
 Instructions:
 
@@ -42,11 +37,12 @@ Instructions:
 
 	8) The program has finished!
 
-Current Version 0.2 (Sept 7, 2016):
+Current Version 0.3 (Sept 12, 2016):
 
-	Added the ability to append data when a new feature class is created.
-	
-	Added excel functionality to make it easier\faster to rearrange fields.
+	Added error checking to most of the user inputs.
+		Checks if the path to the file gdb exists and is a .gdb path.
+		Checks if the number of fields to add is an integer.
+		Checks if the feature class in the file gdb is in the list of feature classes.
 
 Previous versions:
 
@@ -56,3 +52,8 @@ Previous versions:
 	
 		Able to rearrange fields (through entering the numbers corresponding to each field on the screen) (time-consuming).
 
+	Version 0.2 (Sept 7, 2016):
+
+		Added the ability to append data when a new feature class is created.
+	
+		Added excel functionality to make it easier\faster to rearrange fields.
